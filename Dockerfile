@@ -1,5 +1,5 @@
 FROM node:20-alpine
-MAKEDIR /app
+RUN mkdir /app
 WORKDIR /app
 COPY package*.json ./
 COPY . .
