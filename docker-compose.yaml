@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  guess-my-number-app:
+    image: agungsetya/todos-express-sqlite:main
+    container_name: todos-express-student4
+    ports:
+      - "8004:3000"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
